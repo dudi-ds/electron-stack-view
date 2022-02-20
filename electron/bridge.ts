@@ -16,6 +16,15 @@ export const api = {
   send: (channel: string, args: any | any[]) => {
     ipcRenderer.send(channel, args)
   },
+
+  updateBounds: () => {
+    ipcRenderer.send(
+        'webview-size',
+        document.body.offsetWidth || document.body.scrollWidth,
+        document.body.offsetHeight || document.body.scrollHeight,
+    );
+  },
+
   /**
    * Provide an easier way to listen to events
    */

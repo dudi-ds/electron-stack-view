@@ -93,7 +93,7 @@
                   "js": "./src/Login",
                   "name": "login",
                   "preload": {
-                    "js": "./electron/bridge.ts"
+                    "js": "./electron/webview-size.ts"
                   }
                 },
                 {
@@ -101,7 +101,7 @@
                   "js": "./src/Recorder",
                   "name": "recorder",
                   "preload": {
-                    "js": "./electron/bridge.ts"
+                    "js": "./electron/webview-size.ts"
                   }
                 },
                 {
@@ -110,6 +110,7 @@
                   "name": "empty",
                   "preload": {
                     "js": "./electron/bridge.ts"
+
                   }
                 }
               ]
