@@ -103,6 +103,14 @@
                   "preload": {
                     "js": "./electron/bridge.ts"
                   }
+                },
+                {
+                  "html": "./public/index.html",
+                  "js": "./src/EmpyPageForMainWindow",
+                  "name": "empty",
+                  "preload": {
+                    "js": "./electron/bridge.ts"
+                  }
                 }
               ]
             }

@@ -79,13 +79,18 @@ async function registerListeners () {
   ipcMain.on('load-recorder', async (_, message) => {
     const mainBound = mainWindow.getBounds();
 
+    // Clean main Loader //
+    mainWindow.webContents.loadURL('http://localhost:3000/empty')
+
+    // Set position and load route //
     appView.setBounds({x: 0, y: 0, width: mainBound.width, height: 80})
     appView.webContents.loadURL('http://localhost:3000/recorder');
-    appView.setAutoResize({width: true, height: true})
+    appView.setAutoResize({width: true, height: false})
 
+    // Set position and load Recorder view (WebView)  //
     recorderView.setBounds({x: 0, y: 80, width: mainBound.width, height: mainBound.height})
     recorderView.webContents.loadURL('http://github.com/')
-    recorderView.setAutoResize({width: true, height: true})
+    recorderView.setAutoResize({width: true, height: false})
 
 
   })
