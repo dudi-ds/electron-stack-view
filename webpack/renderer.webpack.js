@@ -5,4 +5,7 @@ module.exports = {
   module: {
     rules: require('./rules.webpack'),
   },
+  node: {
+    __dirname: false
+  },
 }

@@ -82,8 +82,24 @@
               "entryPoints": [
                 {
                   "html": "./public/index.html",
-                  "js": "./src/index.tsx",
+                  "js": "./src/Loader/Loader.tsx",
                   "name": "main_window",
+                  "preload": {
+                    "js": "./electron/bridge.ts"
+                  }
+                },
+                {
+                  "html": "./public/index.html",
+                  "js": "./src/Login",
+                  "name": "login",
+                  "preload": {
+                    "js": "./electron/bridge.ts"
+                  }
+                },
+                {
+                  "html": "./public/index.html",
+                  "js": "./src/Recorder",
+                  "name": "recorder",
                   "preload": {
                     "js": "./electron/bridge.ts"
                   }

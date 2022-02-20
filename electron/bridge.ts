@@ -13,6 +13,9 @@ export const api = {
     ipcRenderer.send('message', message)
   },
 
+  send: (channel: string, args: any | any[]) => {
+    ipcRenderer.send(channel, args)
+  },
   /**
    * Provide an easier way to listen to events
    */
