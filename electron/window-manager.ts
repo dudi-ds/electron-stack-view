@@ -12,6 +12,7 @@ export class WindowManager {
     public recorderView: BrowserView
 
 
+
     createWindow() {
         const {width, height} = workAreaSize();
         this.mainWindow = new BrowserWindow({
@@ -42,7 +43,6 @@ export class WindowManager {
             webPreferences: {
                 nodeIntegration: false,
                 contextIsolation: true,
-
                 enablePreferredSizeMode: true,
                 preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
             }
