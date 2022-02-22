@@ -58,9 +58,10 @@ export class WindowManager {
 
 
     createWebViews() {
-        this.appView = this.createWebView();
         this.recorderView = this.createWebView();
+        this.appView = this.createWebView();
         this.mainWindow?.addBrowserView(this.appView)
+
         this.mainWindow?.addBrowserView(this.recorderView)
     }
 }

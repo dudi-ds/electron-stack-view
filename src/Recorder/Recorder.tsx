@@ -1,8 +1,11 @@
 import ReactDOM from "react-dom";
 import {Button} from "../components/Button";
+import Modal from "../Modal";
+import {useState} from "react";
 
 
 export function Recorder() {
+    const [open, setOpen] = useState(false)
     const handleShowLoaded = () => {
         window.Main.send('load-loader', {data: null})
     }
@@ -20,6 +23,11 @@ export function Recorder() {
 
 
             </div>
+            <Button onClick={async () => {
+                await window.Main.send('open-modal', {});
+                setOpen(true)
+            }}>open modal</Button>
+            <Modal open={open}  />
         </>
     )
 }
