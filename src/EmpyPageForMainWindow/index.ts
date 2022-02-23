@@ -1,1 +1,1 @@
-export {EmpyPageForMainWindow as default} from './EmpyPageForMainWindow'
+export {EmptyPageForMainWindow as default} from './EmptyPageForMainWindow'

@@ -1,4 +1,4 @@
-import {app, BrowserWindow, ipcMain} from 'electron'
+import {app, BrowserWindow} from 'electron'
 import {WindowManager} from "./window-manager";
 import path from "path";
 import {electronAppName, rendererAppName} from '../constants';

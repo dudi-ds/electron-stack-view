@@ -1,14 +1,14 @@
 import ReactDOM from "react-dom";
 // import {Button} from "../components/Button";
 
-export function EmpyPageForMainWindow() {
-
+export function EmptyPageForMainWindow() {
+console.log('1111')
   return (
-    <div id="root" style={{ height: '100vh'}}>
+    <div id="root" >
 
         {/* <Button onClick={() => window.Main.send('load-recorder', {data: null})}>Load</Button> */}
     </div>
   )
 }
 
-ReactDOM.render(<EmpyPageForMainWindow />, document.getElementById("root"));
+ReactDOM.render(<EmptyPageForMainWindow />, document.getElementById("root"));

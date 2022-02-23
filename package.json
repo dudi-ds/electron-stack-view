@@ -87,7 +87,8 @@
                   "js": "./src/Loader/Loader.tsx",
                   "name": "main_window",
                   "preload": {
-                    "js": "./electron/bridge.ts"
+                    "js": "./electron/bridge.ts",
+                    "js2": "./electron/bridge.ts"
                   }
                 },
                 {
@@ -111,7 +112,8 @@
                   "js": "./src/EmpyPageForMainWindow",
                   "name": "empty",
                   "preload": {
-                    "js": "./electron/bridge.ts"
+                    "js": "./electron/bridge.ts",
+                    "bridge": "./electron/bridge.ts"
                   }
                 }
               ]

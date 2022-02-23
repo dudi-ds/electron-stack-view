@@ -56,6 +56,7 @@ export class Router {
             this.window.appView.setBounds({x: 0, y: 0, width: mainBound.width, height: this.appViewInitBound.height})
         })
 
+
         ipcMain.on('load-loader', async (_, message) => {
             console.log('load-loader')
             const mainBound =  this.window.mainWindow.getBounds();

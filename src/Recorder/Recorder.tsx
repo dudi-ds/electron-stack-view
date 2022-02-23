@@ -27,7 +27,12 @@ export function Recorder() {
                 await window.Main.send('open-modal', {});
                 setOpen(true)
             }}>open modal</Button>
-            <Modal open={open}  />
+            <Modal open={open}  onClose={
+                () => {
+                    window.Main.send('close-modal', {})
+                    setOpen(false)
+                }
+            } />
         </>
     )
 }
